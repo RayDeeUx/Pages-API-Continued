@@ -143,7 +143,6 @@ void PageMenu::setPaged(int count, PageOrientation orientation, float max, float
         layout->ignoreInvisibleChildren(true);
         if (AxisLayout* axisLayout = typeinfo_cast<AxisLayout*>(layout)) {
             axisLayout->setAutoScale(true);
-            log::info("autoscale yay!"); // REMOVE BEFORE RELEASING
         }
     }
     updateLayout();
@@ -193,7 +192,7 @@ void PageMenu::addArrowButtons() {
         nextButton->setPositionY(fields->m_arrowsMenu->getContentHeight()/2);
 
         if (fields->m_arrowsMenu->getScaledContentWidth() > fields->m_max) {
-            float scaleFactor = fields->m_max/fields->m_arrowsMenu->getScaledContentWidth();
+            float scaleFactor = fields->m_max / fields->m_arrowsMenu->getScaledContentWidth();
             fields->m_arrowsMenu->setScale(scaleFactor);
             setScale(scaleFactor * getScale());
         }
@@ -210,7 +209,7 @@ void PageMenu::addArrowButtons() {
         prevButton->setPositionY(fields->m_arrowsMenu->getContentHeight() - fields->m_buttonWidth/2);
 
         if (fields->m_arrowsMenu->getScaledContentHeight() > fields->m_max) {
-            float scaleFactor = fields->m_max/fields->m_arrowsMenu->getScaledContentHeight() ;
+            float scaleFactor = fields->m_max / fields->m_arrowsMenu->getScaledContentHeight();
             fields->m_arrowsMenu->setScale(scaleFactor);
             setScale(scaleFactor * getScale());
         }
