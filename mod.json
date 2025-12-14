@@ -7,7 +7,7 @@
         "android": "2.2074"
     },
     "version": "v1.4.11",
-    "id": "raydeeux.pages_api",
+    "id": "alphalaneous.pages_api",
     "name": "Pages API",
     "developer": "RayDeeUx",
     "description": "An API to add pages. Original project by Alphalaneous.",
@@ -15,7 +15,7 @@
         "geode.node-ids": ">=v1.21.0"
     },
     "incompatibilities": {
-        "alphalaneous.pages_api": {
+        "raydeeux.pages_api": {
             "version": ">=1.4.10",
             "importance": "superseded"
         }
