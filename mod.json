@@ -1,5 +1,5 @@
 {
-    "geode": "4.7.0",
+    "geode": "4.10.0",
     "gd": {
         "win": "2.2074",
         "mac": "2.2074",
@@ -7,7 +7,7 @@
         "android": "2.2074"
     },
     "version": "v1.4.11",
-    "id": "raydeeux.pages_api",
+    "id": "alphalaneous.pages_api",
     "name": "Pages API",
     "developer": "RayDeeUx",
     "description": "An API to add pages. Original project by Alphalaneous.",
