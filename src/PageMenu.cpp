@@ -143,7 +143,7 @@ void PageMenu::setPaged(int count, PageOrientation orientation, float max, float
         layout->ignoreInvisibleChildren(true);
         if (AxisLayout* axisLayout = typeinfo_cast<AxisLayout*>(layout)) {
             axisLayout->setAxisAlignment(AxisAlignment::Center);
-            axisLayout->setGrowCrossAxis(false);
+            axisLayout->setGrowCrossAxis(true);
             axisLayout->setCrossAxisOverflow(false);
             axisLayout->setAutoScale(true);
         }
