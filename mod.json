@@ -1,32 +1,28 @@
 {
-    "geode": "4.9.0",
+    "geode": "4.7.0",
     "gd": {
         "win": "2.2074",
-        "android": "2.2074",
         "mac": "2.2074",
-        "ios": "2.2074"
+        "ios": "2.2074",
+        "android": "2.2074"
     },
-    "version": "v1.4.10",
+    "version": "v1.4.11",
     "id": "alphalaneous.pages_api",
     "name": "Pages API",
-    "developer": "Alphalaneous",
-    "description": "An API to add pages.",
-    "dependencies": [
-        {
-            "id": "geode.node-ids",
-            "version": ">=v1.18.0",
-            "importance": "required"
-        }
-    ],
+    "developer": "RayDeeUx",
+    "description": "An API to add pages. Original project by Alphalaneous.",
+    "dependencies": {
+        "geode.node-ids": ">=v1.21.0"
+    },
     "api": {
         "include": [
             "include/*.h"
         ]
     },
     "links": {
-        "homepage": "https://linktr.ee/Alphalaneous",
-        "source": "https://github.com/Alphalaneous/Pages-API",
-        "community": "https://discord.gg/Txn2CA5dHF"
+        "homepage": "https://discord.com/channels/822510988409831486/1206371881222144020",
+        "source": "https://github.com/RayDeeUx/Pages-API-Continued",
+        "community": "https://discord.gg/WqZBYdBWZW"
     },
     "tags": ["developer"]
 }

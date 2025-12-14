@@ -8,8 +8,10 @@ CCPoint getNodeCenter(CCNode* node) {
     CCSize size = node->getScaledContentSize();
     CCPoint anchor = node->getAnchorPoint();
 
-    return {pos.x + size.width * (0.5f - anchor.x),
-               pos.y + size.height * (0.5f - anchor.y)};
+    return {
+        pos.x + size.width * (0.5f - anchor.x),
+        pos.y + size.height * (0.5f - anchor.y)
+    };
 }
 
 void PageMenu::checkChildren(float dt) {
@@ -47,8 +49,7 @@ void PageMenu::enablePages(bool enabled) {
     fields->m_paged = enabled;
     if (enabled) {
         setPaged(fields->m_elementCount, fields->m_orientation, fields->m_max, fields->m_padding);
-    }
-    else {
+    } else {
         for (CCNode* child : CCArrayExt<CCNode*>(getChildren())) {
             child->setVisible(true);
         }
@@ -65,8 +66,7 @@ void PageMenu::setFixed(float max) {
     }
     if (fields->m_orientation == PageOrientation::VERTICAL) {
         setContentWidth(max);
-    }
-    else {
+    } else {
         setContentHeight(max);
     }
 }
@@ -87,7 +87,6 @@ auto var = CallFuncExt::create([this]() {\
 setUserObject(std::string(Mod::get()->expandSpriteName(name "-callback")), var);
 
 void PageMenu::setPaged(int count, PageOrientation orientation, float max, float padding) {
-
     auto fields = m_fields.self();
 
     MAKE_CALLBACK(CCInteger, countCallback, "element-count", setElementCount);
@@ -104,10 +103,10 @@ void PageMenu::setPaged(int count, PageOrientation orientation, float max, float
 
     if (fields->m_pages) {
         fields->m_pages->removeAllObjects();
-    }
-    else {
+    } else {
         fields->m_pages = CCArray::create();
     }
+
     fields->m_paged = true;
     fields->m_lastChildrenCount = getChildrenCount();
     fields->m_max = max;
@@ -142,6 +141,10 @@ void PageMenu::setPaged(int count, PageOrientation orientation, float max, float
     setPage(fields->m_currentPage);
     if (Layout* layout = getLayout()) {
         layout->ignoreInvisibleChildren(true);
+        if (AxisLayout* axisLayout = typeinfo_cast<AxisLayout*>(layout)) {
+            axisLayout->setAutoScale(true);
+            log::info("autoscale yay!"); // REMOVE BEFORE RELEASING
+        }
     }
     updateLayout();
     addArrowButtons();
@@ -194,8 +197,7 @@ void PageMenu::addArrowButtons() {
             fields->m_arrowsMenu->setScale(scaleFactor);
             setScale(scaleFactor * getScale());
         }
-    }
-    else {
+    } else {
         fields->m_arrowsMenu->setContentSize({getContentWidth(), getContentHeight() + fields->m_buttonWidth * 2 + fields->m_padding * 2});
 
         prevButton->setRotation(90);
