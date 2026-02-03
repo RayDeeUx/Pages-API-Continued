@@ -7,7 +7,7 @@
 #include "PagesAPI.h"
 
 #ifdef GEODE_IS_WINDOWS
-    #ifdef ALPHALANEOUS_PAGES_API_EXPORTING
+    #ifdef RAYDEEUX_PAGES_API_EXPORTING
         #define PAGES_API_DLL __declspec(dllexport)
     #else
         #define PAGES_API_DLL __declspec(dllimport)
