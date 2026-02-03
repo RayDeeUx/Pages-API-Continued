@@ -139,7 +139,7 @@ void PageMenu::setPaged(int count, PageOrientation orientation, float max, float
     }
 
     setPage(fields->m_currentPage);
-    if (Layout* layout = getLayout()) {
+    if (AxisLayout* layout = typeinfo_cast<AxisLayout*>(getLayout())) {
         layout->ignoreInvisibleChildren(true);
         if (AxisLayout* axisLayout = typeinfo_cast<AxisLayout*>(layout)) {
             axisLayout->setAxisAlignment(AxisAlignment::Center);
