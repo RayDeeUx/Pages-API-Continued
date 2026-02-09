@@ -1,12 +1,12 @@
 {
-    "geode": "5.0.0-alpha.1",
+    "geode": "5.0.0-alpha.2",
     "gd": {
         "win": "2.2081",
         "mac": "2.2081",
         "ios": "2.2081",
         "android": "2.2081"
     },
-    "version": "v1.4.12",
+    "version": "v1.4.13",
     "id": "raydeeux.pages_api",
     "name": "Pages API Continued",
     "developer": "RayDeeUx",
@@ -16,8 +16,7 @@
     },
     "incompatibilities": {
         "alphalaneous.pages_api": {
-            "version": ">=1.4.10",
-            "importance": "superseded"
+            "version": ">=1.0.0"
         }
     },
     "api": {
