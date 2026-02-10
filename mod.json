@@ -6,7 +6,7 @@
         "ios": "2.2081",
         "android": "2.2081"
     },
-    "version": "v1.4.13",
+    "version": "v1.4.14",
     "id": "raydeeux.pages_api",
     "name": "Pages API Continued",
     "developer": "RayDeeUx",
@@ -16,7 +16,8 @@
     },
     "incompatibilities": {
         "alphalaneous.pages_api": {
-            "version": ">=1.0.0"
+            "version": ">=1.0.0",
+            "breaking": true
         }
     },
     "api": {
