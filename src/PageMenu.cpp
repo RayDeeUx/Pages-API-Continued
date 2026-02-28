@@ -149,12 +149,13 @@ void PageMenu::setPaged(int count, PageOrientation orientation, float max, float
     }
     updateLayout();
     addArrowButtons();
+    if (fields->m_pageCount <= 1) enablePages(false);
 }
 
 void PageMenu::addArrowButtons() {
     auto fields = m_fields.self();
 
-    if (fields->m_pageCount <= 1) return PageMenu::enablePages(false);
+    if (fields->m_pageCount <= 1) return;
 
     CCNode* parent = getParent();
     if (fields->m_arrowsMenu) {
