@@ -139,14 +139,12 @@ void PageMenu::setPaged(int count, PageOrientation orientation, float max, float
     }
 
     setPage(fields->m_currentPage);
-    if (AxisLayout* layout = typeinfo_cast<AxisLayout*>(getLayout())) {
-        layout->ignoreInvisibleChildren(true);
-        if (AxisLayout* axisLayout = typeinfo_cast<AxisLayout*>(layout)) {
-            axisLayout->setAxisAlignment(AxisAlignment::Center);
-            axisLayout->setGrowCrossAxis(true);
-            axisLayout->setCrossAxisOverflow(false);
-            axisLayout->setAutoScale(true);
-        }
+    if (AxisLayout* axisLayout = typeinfo_cast<AxisLayout*>(getLayout())) {
+        axisLayout->ignoreInvisibleChildren(true);
+        axisLayout->setAxisAlignment(AxisAlignment::Center);
+        axisLayout->setGrowCrossAxis(true);
+        axisLayout->setCrossAxisOverflow(false);
+        axisLayout->setAutoScale(true);
     }
     updateLayout();
     addArrowButtons();
