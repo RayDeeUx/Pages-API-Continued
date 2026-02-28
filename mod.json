@@ -1,12 +1,12 @@
 {
-    "geode": "5.0.0-beta.1",
+    "geode": "5.0.1",
     "gd": {
         "win": "2.2081",
         "mac": "2.2081",
         "ios": "2.2081",
         "android": "2.2081"
     },
-    "version": "v1.4.15",
+    "version": "v1.4.16.beta-1",
     "id": "raydeeux.pages_api",
     "name": "Pages API Continued",
     "developer": "RayDeeUx",
