@@ -56,6 +56,7 @@ void PageMenu::enablePages(bool enabled) {
         if (fields->m_arrowsMenu) {
             fields->m_arrowsMenu->removeFromParent();
         }
+        updateLayout();
     }
 }
 
@@ -153,7 +154,7 @@ void PageMenu::setPaged(int count, PageOrientation orientation, float max, float
 void PageMenu::addArrowButtons() {
     auto fields = m_fields.self();
 
-    if (fields->m_pageCount <= 1) return;
+    if (fields->m_pageCount <= 1) return PageMenu::enablePages(false);
 
     CCNode* parent = getParent();
     if (fields->m_arrowsMenu) {
