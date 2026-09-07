@@ -10,7 +10,7 @@
     "id": "raydeeux.pages_api",
     "name": "Pages API Continued",
     "developer": "RayDeeUx",
-    "description": "An API to add pages. Original project by Alphalaneous.",
+    "description": "An API to add pages.",
     "dependencies": {
         "geode.node-ids": ">=v1.21.1"
     },
@@ -24,7 +24,7 @@
     },
     "links": {
         "homepage": "https://discord.com/channels/822510988409831486/1206371881222144020",
-        "source": "https://github.com/RayDeeUx/Pages-API-Continued",
+        "source": "https://codeberg.org/RayDeeUx/Pages-API-Continued",
         "community": "https://discord.gg/WqZBYdBWZW"
     },
     "tags": ["developer"]
