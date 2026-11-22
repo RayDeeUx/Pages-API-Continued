@@ -124,7 +124,7 @@ void PageMenu::setPaged(int count, PageOrientation orientation, float max, float
     }
 
     fields->m_pageCount = std::ceil(validChildren->count()/(double)count);
-
+    this->setUserFlag("potentially-paginated-menu"_spr);
     schedule(schedule_selector(PageMenu::checkChildren));
 
     for (int i = 0; i < fields->m_pageCount; i++) {
