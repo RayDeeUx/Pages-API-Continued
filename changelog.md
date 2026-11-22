@@ -1,4 +1,6 @@
 # Pages API Continued Changelog
+## v1.4.17
+- 2.2091 as a game update was a net negative.
 ## v1.4.16-beta.1 and v1.4.16
 - Apparently there's a usecase for removing elements even after paginating a menu. Who could've seen that coming? /genq
 ## v1.4.15, v1.4.14, and v1.4.13
